@@ -1,5 +1,12 @@
 provider "aws" {
     region = "eu-west-2"
+    profile = var.aws_profile
+}
+
+variable "aws_profile" {
+  description = "The AWS CLI profile to use"
+  type        = string
+  default     = "default"  # Set the default value to "default"
 }
 
 variable vpc_cidr_block {}
